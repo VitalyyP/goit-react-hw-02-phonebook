@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import shortid from 'shortid';
-import './App.css';
+import s from './App.module.css';
 import Form from './components/Form';
 import Filter from './components/Filter';
 import ContactList from './components/ContactList/ContactList';
@@ -63,7 +63,7 @@ class App extends Component {
       <Container>
         <h1>Phonebook</h1>
         <Form getFormData={getFormData} />
-        <h2>Contacts</h2>
+        <h2 className={s.contactsTitle}>Contacts</h2>
         <Filter value={filter} onChange={handleInputChange} />
         <ContactList
           contacts={contacts}

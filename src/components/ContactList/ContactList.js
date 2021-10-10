@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import Contact from '../Contact';
+
 export default function ContactList({ getVisibleContacts, deleteContact }) {
   return (
     <ul>
@@ -8,3 +10,8 @@ export default function ContactList({ getVisibleContacts, deleteContact }) {
     </ul>
   );
 }
+
+ContactList.propTypes = {
+  getVisibleContacts: PropTypes.func,
+  deleteContact: PropTypes.func,
+};

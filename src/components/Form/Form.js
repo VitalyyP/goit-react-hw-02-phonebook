@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
+import s from './Form.module.css';
 
 class Form extends Component {
   state = {
@@ -52,7 +54,9 @@ class Form extends Component {
               required
             />
           </label>
-          <button type="submit">Add contact</button>
+          <button type="submit" className={s.button}>
+            Add contact
+          </button>
         </form>
       </>
     );
@@ -60,3 +64,7 @@ class Form extends Component {
 }
 
 export default Form;
+
+Form.propTypes = {
+  getFormData: PropTypes.func,
+};
